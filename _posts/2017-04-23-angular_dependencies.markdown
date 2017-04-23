@@ -6,8 +6,11 @@ title:  "Angular Dependencies"
 
 
 >@angular/common
+
 >@angular/compiler
+
 >@angular/core
+
 >@angular/platform-browser
 >@angular/platform-browser-dynamic
 >concurrently
