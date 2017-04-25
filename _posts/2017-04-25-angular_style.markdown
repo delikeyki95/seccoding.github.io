@@ -163,6 +163,7 @@ button {
 
 
 Images
-<img src="../images/seats.jpg"/><br/>
-<img src="../images/shocks.jpg"/><br/>
-<img src="../images/tires.jpg"/>
+
+<img src="https://github.com/seccoding/seccoding.github.io/tree/master/images/seats.jpg"/><br/>
+<img src="https://github.com/seccoding/seccoding.github.io/tree/master/images/shocks.jpg"/><br/>
+<img src="https://github.com/seccoding/seccoding.github.io/tree/master/images/tires.jpg"/>
