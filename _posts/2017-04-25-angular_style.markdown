@@ -164,6 +164,6 @@ button {
 
 Images
 
-<img src="https://github.com/seccoding/seccoding.github.io/tree/master/images/seats.jpg"/><br/>
-<img src="https://github.com/seccoding/seccoding.github.io/tree/master/images/shocks.jpg"/><br/>
-<img src="https://github.com/seccoding/seccoding.github.io/tree/master/images/tires.jpg"/>
+<img src="https://github.com/seccoding/seccoding.github.io/blob/master/images/seats.jpg?raw=true"/><br/>
+<img src="https://github.com/seccoding/seccoding.github.io/blob/master/images/shocks.jpg?raw=true"/><br/>
+<img src="https://github.com/seccoding/seccoding.github.io/blob/master/images/tires.jpg?raw=true"/>
