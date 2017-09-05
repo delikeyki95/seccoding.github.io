@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "Spring Framework 3일차 SQL 파일"
+---
+
+## Table Script
+
+<pre>
+CREATE TABLE SYSTEM.BOARD
+(
+	ID NUMBER NOT NULL,
+	SUBJECT VARCHAR2(1000 BYTE),
+	CONTENT VARCHAR2(4000 BYTE),
+	USER_ID VARCHAR2(100 BYTE),
+	CRT_DT DATE,
+	MDFY_DT DATE,
+	HIT NUMBER,
+	RECOMMEND NUMBER
+)
+;
+
+CREATE UNIQUE INDEX SYSTEM.BOARD_PK ON SYSTEM.BOARD (ID)
+;
+
+ALTER TABLE SYSTEM.BOARD ADD ( CONSTRAINT BOARD_PK PRIMARY KEY (ID) )
+;
+</pre>
+
+## CRUD Query
+<pre>
+SELECT	ID
+        , SUBJECT
+        , CONTENT  
+				, USER_ID
+				, TO_CHAR(CRT_DT, 'YYYY-MM-DD HH24:MI:SS') CRT_DT
+				, TO_CHAR(MDFY_DT, 'YYYY-MM-DD HH24:MI:SS') MDFY_DT  
+				, HIT
+				, RECOMMEND
+FROM	  SYSTEM.BOARD
+WHERE	  ID = ?
+;
+
+UPDATE	SYSTEM.BOARD
+SET		  HIT = HIT + 1
+WHERE	  ID = ?
+;
+
+UPDATE	SYSTEM.BOARD
+SET		  RECOMMEND = RECOMMEND + 1
+WHERE	  ID = ?
+;
+
+INSERT INTO SYSTEM.BOARD (
+			ID
+			, SUBJECT
+			, CONTENT  
+			, USER_ID
+			, FILE_NAME
+			, CRT_DT
+			, MDFY_DT  
+			, HIT
+			, RECOMMEND)  
+VALUES (
+			BOARD_ID_SEQ.NEXTVAL
+			, ? /*subject*/
+			, ? /*content*/
+			, ? /*userId*/
+			, ? /*fileName*/
+			, SYSDATE
+			, SYSDATE
+			, 0
+			, 0 )
+;
+</pre>
